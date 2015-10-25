@@ -1,9 +1,9 @@
 library(ggplot2)
 if(!exists("NEI")){
-    NEI <- readRDS("./data/summarySCC_PM25.rds")
+    NEI <- readRDS("./summarySCC_PM25.rds")
 }
 if(!exists("SCC")){
-    SCC <- readRDS("./data/Source_Classification_Code.rds")
+    SCC <- readRDS("./Source_Classification_Code.rds")
 }
 # merge the two data sets 
 #if(!exists("mergedNEISCC")){
