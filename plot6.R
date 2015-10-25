@@ -5,10 +5,6 @@ if(!exists("NEI")){
 if(!exists("SCC")){
     SCC <- readRDS("./Source_Classification_Code.rds")
 }
-# merge the two data sets 
-#if(!exists("mergedNEISCC")){
-#    mergedNEISCC <- merge(NEI, SCC, by="SCC")
-#}
 
 # Baltimore is 24510, Los Angeles is 06037
 fipsNEI <- NEI[(NEI$fips=="24510"|NEI$fips=="06037") & NEI$type=="ON-ROAD",  ]
