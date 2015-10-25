@@ -16,7 +16,7 @@ coalNEISCC <- mergedNEISCC[coalMatches, ]
 PM25TotalByYear <- aggregate(Emissions ~ year, coalNEISCC, sum)
 
 png("plot4.png", width=640, height=480)
-g <- ggplot(PM25TotalByYear, aes(factor(year), Emissions))
+g <- ggplot(PM25TotalByYear, aes(factor(year), fill=year, Emissions))
 g <- g + geom_bar(stat="identity") +
     xlab("year") +
     ylab(expression('Total PM'[2.5]*" Emissions")) +
